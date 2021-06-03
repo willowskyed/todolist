@@ -4,6 +4,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>To Do List</title>
+    <!-- fonts & icons -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@100&display=swap">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
     <!-- CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css" type="text/css"/>
@@ -16,6 +20,10 @@
       <div class="row">
         <div class="col-xs-12">
           <h2>To Do List</h2>
+          <form id="create-task">
+            <input id="new-task-content" type="text" placeholder="What do you want to accomplish today?" required/>
+            <button class="btn"><i class="fas fa-plus-circle"></i></button>
+          </form>
           <div id="todo-list">
           </div>
         </div>
