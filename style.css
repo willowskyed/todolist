@@ -1,12 +1,17 @@
 body {
   height: 100vh;
+  background: linear-gradient(90deg, rgba(208,196,215,1) 0%, rgba(203,228,235,1) 50%, rgba(204,217,171,1) 100%);
 }
 
 .container {
   display: flex;
   width: 75vw;
+  height: 75vh;
   margin: auto;
+  margin-top: 50px;
   justify-content: center;
+  background-color: rgba(255, 255, 255, 0.5);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
 
 h2 {
@@ -16,20 +21,24 @@ h2 {
   margin: 50px;
 }
 
-#new-task-content {
+#new-task-content, p {
   font-family: 'Work Sans', sans-serif;
+  background-color: white;
+  border-radius: 50px;
+  border-color: white;
+  border-style: solid;
+  border-width: thin;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+#new-task-content {
   font-size: 17px;
   font-weight: bold;
   width: 500px;
   margin-bottom: 10px;
   margin-right: -5px;
   padding: 3px;
-  border-radius: 50px;
-  border-color: white;
-  border-style: solid;
-  border-width: thin;
   text-align: center;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
 
 #new-task-content:focus {
@@ -37,17 +46,10 @@ h2 {
 }
 
 p {
-  font-family: 'Work Sans', sans-serif;
   font-size: 15px;
   font-weight: bolder;
-  background-color: white;
   min-width: 500px;
   max-width: 500px;
-  border-radius: 50px;
-  border-color: white;
-  border-style: solid;
-  border-width: thin;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
   margin-left: 15px;
   margin-top: 10px;
   padding: 5px;
