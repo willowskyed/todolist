@@ -1,4 +1,12 @@
 $(document).ready(function(){
+
+// date
+  n =  new Date();
+  y = n.getFullYear();
+  m = n.getMonth() + 1;
+  d = n.getDate();
+  document.getElementById("date").innerHTML = m + "/" + d + "/" + y;
+
 // update task list
   var getAndDisplayAllTasks = function () {
   $.ajax({
@@ -8,7 +16,7 @@ $(document).ready(function(){
     success: function (response, textStatus) {
       $('#todo-list').empty();
       response.tasks.forEach(function (task) {
-        $('#todo-list').append('<div class="row"><p class="col-xs-8 border">' + task.content + '</p><button class="delete btn" data-id="' + task.id + '"><i class="fas fa-minus-circle"></i></button><input type="checkbox" class="mark-complete" data-id="' + task.id + '"' + (task.completed ? 'checked' : '') + '>');;
+        $('#todo-list').append('<div class="row"><p class="col-xs-8 border">' + task.content + '</p><button class="delete btn" data-id="' + task.id + '"><i class="fas fa-minus"></i></button><input type="checkbox" class="mark-complete" data-id="' + task.id + '"' + (task.completed ? 'checked' : '') + '><label for="mark-complete"></label>');;
       });
     },
     error: function (request, textStatus, errorMessage) {
@@ -17,7 +25,7 @@ $(document).ready(function(){
   });
 }
 
-// create post request
+// add a new task
   var createTask = function () {
     $.ajax({
       type: 'POST',

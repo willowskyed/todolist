@@ -72,9 +72,9 @@ p {
 }
 
 .mark-complete {
-  height: 20px;
-  width: 20px;
-  background-color: white;
+  height: 25px;
+  width: 25px;
+  background-color: transparent;
   border-radius: 50%;
   vertical-align: middle;
   border: 1px solid grey;
@@ -83,8 +83,13 @@ p {
   cursor: pointer;
 }
 
-.mark-complete:checked {
-  background-color: gray;
+.mark-complete:checked + label:after {
+  content: "✔";
+  font-size: 13px;
+  color: grey;
+  margin-left: -18px;
+  margin-top: -7px;
+  position: absolute;
 }
 
 /* media queries for smaller screens */
